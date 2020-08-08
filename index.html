@@ -1,1187 +1,268 @@
 <!DOCTYPE html>
-<!--[if IE 8 ]><html class="no-js oldie ie8" lang="en"> <![endif]-->
-<!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
+<html class="no-js" lang="en">
+
 <head>
-
-   <!--- basic page needs
-   ================================================== -->
-   <meta charset="utf-8">
-	<title>ABBAS ISMAIL</title>
-	<meta name="description" content="">  
-	<meta name="author" content="">
-
-   <!-- mobile specific metas
-   ================================================== -->
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
- 	<!-- CSS
-   ================================================== -->
-   <link rel="stylesheet" href="css/base.css">  
-   <link rel="stylesheet" href="css/main.css">
-   <link rel="stylesheet" href="css/vendor.css">     
-
-   <!-- script
-   ================================================== -->   
-	<script src="js/modernizr.js"></script>
-	<script src="js/pace.min.js"></script>
-
-   <!-- favicons
-	================================================== -->
-	<link rel="icon" type="image/png" href="profile.png">
-
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Portfolio</title>
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
 </head>
 
-<body id="top">
-
-	<!-- header 
-   ================================================== -->
-   <header>   	
-   	<div class="row">
-
-   		<div class="top-bar">
-   			<a class="menu-toggle" href="#"><span>Menu</span></a>
-
-	   		<div class="logo">
-		         <a href="index.html">ABBASr</a>
-		      </div>		      
-
-		   	<nav id="main-nav-wrap">
-					<ul class="main-navigation">
-						<li class="current"><a class="smoothscroll"  href="#intro" title="">Home</a></li>
-						<li><a class="smoothscroll"  href="#about" title="">About</a></li>
-						<!--li><a class="smoothscroll"  href="#about" title="">Experience</a></li -->
-						<li><a class="smoothscroll"  href="#portfolio" title="">Projects</a></li>
-						
-						<!--<li><a class="smoothscroll"  href="#services" title="">Services</a></li>	-->				
-						<li><a class="smoothscroll"  href="#contact" title="">Contact</a></li>	
-									
-					</ul>
-				</nav>    		
-   		</div> <!-- /top-bar --> 
-   		
-   	</div> <!-- /row --> 		
-   </header> <!-- /header -->
-
-	<!-- intro section
-   ================================================== -->
-   <section id="intro">   
-
-   	<div class="intro-overlay"></div>	
-
-   	<div class="intro-content">
-   		<div class="row">
-
-   			<div class="col-twelve">
-
-	   			<h5>Hello, World.</h5>
-	   			<h1>I'm ABBAS ISMAIL</h1>
-
-	   			<p class="intro-position">
-	   				<span>Undergraduate, CSE BIT,MESRA</span>
-	   				<span>Computer Vision & Deep Learning enthusiast</span> 
-	   			</p>
-
-	   			<a class="button stroke smoothscroll" href="#about" title="">About Me</a>
-
-	   		</div>  
-   			
-   		</div>   		 		
-   	</div> <!-- /intro-content --> 
-
-   	<!--<ul class="intro-social">        
-         <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-         <li><a href="#"><i class="fa fa-behance"></i></a></li>
-         <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-         <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-         <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-      </ul> <! /intro-social -->      	
-
-   </section> <!-- /intro -->
-
-
-   <!-- about section
-   ================================================== -->
-   <section id="about">  
-
-   	<div class="row section-intro">
-   		<div class="col-twelve">
-
-   			<h5>About</h5>
-   			<h1></h1>
-
-   			<div class="intro-info">
-
-   				<img src="images/ankur.jpg" alt="Profile Picture">
-
-   				<p class="lead">I am a <strong> third year undergraduate</strong> in the <strong>Computer Science Department</strong> at <strong>Birla Institute Of Technology, Mesra, India .</strong> I am broadly interested in <strong>Deep Learning and it's applications in Computer Vision. </strong>I have done various projects on Computer Vision, one of them is <a href ="https://github.com/abbas5253/PC-Security-Notification-System" target="_blank">PC-SECURITY-NOTIFICATION-APP</a> which recognizes the person accessing your PC in logged-in state is admin or not.If not, it  automatically sends text message to your registered number. Also, I have been currently working on the task of <strong>Word Boundary detection</strong> under <a href = "https://www.cse.iitk.ac.in/users/nsrivast/" target="_blank">Asst. Prof. Nisheeth Srivastava</a>. In the summer of 2018,I worked on a project , where I used <strong>Convolutional Neural Networks for predicting arrythmias from ECG signals.</strong> I also have interned under <a href = "https://www.iiitd.ac.in/rajivratn" target="_blank">Asst. Prof. Rajiv Ratn Shah</a> at IIIT Delhi in December 2017 where my task was to <strong>classify tweets using LSTMs.</strong> Apart from this, I spend my free time usually playing football or just browsing the web for some startup idea.</p>
-   			</div>   			
-
-   		</div>   		
-   	</div> <!-- /section-intro -->
-
-   	<div class="row about-content">
-
-   		<div class="col-six tab-full">
-
-   			<!--<h3>Profile</h3>
-   			<p>Lorem ipsum Qui veniam ut consequat ex ullamco nulla in non ut esse in magna sint minim officia consectetur nisi commodo ea magna pariatur nisi cillum.</p>
-
-   			<ul class="info-list">
-   				<li>
-   					<strong>Fullname:</strong>
-   					<span>Juan Dela Cruz</span>
-   				</li>
-   				<li>
-   					<strong>Birth Date:</strong>
-   					<span>September 28, 1987</span>
-   				</li>
-   				<li>
-   					<strong>Job:</strong>
-   					<span>Freelancer, Frontend Developer</span>
-   				</li>
-   				<li>
-   					<strong>Website:</strong>
-   					<span></span>
-   				</li>
-   				<li>
-   					<strong>Email:</strong>
-   					<span></span>
-   				</li>
-
-   			</ul> <!-- /info-list -->
-
-   		</div>
-
-   		<!--<div class="col-six tab-full">
-
-   			<h3>Skills</h3>
-   			<p>Lorem ipsum Qui veniam ut consequat ex ullamco nulla in non ut esse in magna sint minim officia consectetur nisi commodo ea magna pariatur nisi cillum.</p>
-
-				<ul class="skill-bars">
-				   <li>
-				   	<div class="progress percent90"><span>90%</span></div>
-				   	<strong>HTML5</strong>
-				   </li>
-				   <li>
-				   	<div class="progress percent85"><span>85%</span></div>
-				   	<strong>CSS3</strong>
-				   </li>
-				   <li>
-				   	<div class="progress percent70"><span>70%</span></div>
-				   	<strong>JQuery</strong>
-				   </li>
-				   <li>
-				   	<div class="progress percent95"><span>95%</span></div>
-				   	<strong>PHP</strong>
-				   </li>
-				   <li>
-
-				   	<div class="progress percent75"><span>75%</span></div>
-				   	<strong>Wordpress</strong>
-				   </li>
-      
-				</ul> <!-- /skill-bars -->		
-
-   		</div>
-
-   	</div>
-
-   	<div class="row button-section">
-   		<div class="col-twelve">
-   			<a href="https://github.com/abbas5253" target="_blank" title="" class="button button-primary">Github Profile</a>
-   			<a href="ABBAS_ISMAIL_FINAL.pdf" title="" class="button button-primary" target="_blank">Resume</a>
-   		</div>   		
-   	</div>
-
-   </section> <!-- /process-->    
-
-
-   <!-- resume Section
-   ================================================== -->
-	<!--<section id="resume" class="grey-section">
-
-		<div class="row section-intro">
-   		<div class="col-twelve">
-
-   			<h5>Resume</h5>
-   			<h1></h1>
-
-   			
-   		</div>   		
-   	</div> <!-- /section-intro--> 
-
-   	<!--<div class="row resume-timeline">
-
-   		<div class="col-twelve resume-header">
-
-   			<h2>Internships</h2>
-
-   		</div> <!-- /resume-header --> 
-
-   		<!--<div class="col-twelve">
-
-   			<div class="timeline-wrap">
-
-   				<div class="timeline-block">
-
-	   				<div class="timeline-ico">
-	   					<i class="fa fa-graduation-cap"></i>
-	   				</div>
-
-	   				<div class="timeline-header">
-	   					<h3>ECG Arrhythmia Classification using 2D CNN</h3>
-	   					<p>May 2018 - July 2018</p>
-	   				</div>
-
-	   				<div class="timeline-content">
-	   					<h4>Vios Medical, Bangalore</h4>
-	   					<p>•Used MIT-BIH arrhythmia database<br>•Classified raw ECG signals into 6 classes of arrhythmia and healthy<br>•Segmented ECG beats and converted them to images<br>•Used Convolutional Neural Networks and Transfer Learning models like VGG and Inception<br>•Achieved an accuracy of 99.31<br>•Deployed the model on localhost using Flask</p>
-	   				</div>
-
-	   			</div> <!-- /timeline-block -->
-
-	   			<!--<div class="timeline-block">
-
-	   				<div class="timeline-ico">
-	   					<i class="fa fa-graduation-cap"></i>
-	   				</div>
-
-	   				<div class="timeline-header">
-	   					<h3>Classifying tweets</h3>
-	   					<p>December 2017</p>
-	   				</div>
-
-	   				<div class="timeline-content">
-	   					<h4>Asst. Prof. Rajiv Shah, IIIT Delhi</h4>
-	   					<p>•Classifying tweets mentioning personal intake of medicine in twitter.<br>
-							•Involved algorithms like LSTM, Bidirectional LSTM and LSTM with attention.<br>
-							•Used self trained word embedding models to pre process the tweets using Word2Vec.</p>
-	   				</div>
-
-	   			</div> <!-- /timeline-block -->
-
-	   			<!--<div class="timeline-block">
-
-	   				<!--<div class="timeline-ico">
-	   					<i class="fa fa-graduation-cap"></i>
-	   				</div>
-
-	   				<!<div class="timeline-header">
-	   					<h3>Web Designer</h3>
-	   					<p>May 2013 - June 2014</p>
-	   				</div>
-
-	   				<div class="timeline-content">
-	   					<h4>Great Designs Studio</h4>
-	   					<p>Lorem ipsum Occaecat do esse ex et dolor culpa nisi ex in magna consectetur nisi cupidatat laboris esse eiusmod deserunt aute do quis velit esse sed Ut proident cupidatat nulla esse cillum laborum occaecat nostrud sit dolor incididunt amet est occaecat nisi incididunt.</p>
-	   				</div>
-
-	   			</div> <!-- /timeline-block -->
-
-   			<!--</div> <!-- /timeline-wrap -->   			
-
-   		<!--</div> <!-- /col-twelve -->
-   		
-   	<!--</div> <!-- /resume-timeline -->
-   	
-   	<!--</div> <!-- /section-intro--> 
-
-   	<!--<div class="row resume-timeline">
-
-   		<div class="col-twelve resume-header">
-
-   			<h2>Projects</h2>
-
-   		</div> <!-- /resume-header -->
-
-   		<!--<div class="col-twelve">
-
-   			<div class="timeline-wrap">
-
-   			<div class="timeline-block">
-
-	   				<div class="timeline-ico">
-	   					<i class="fa fa-graduation-cap"></i>
-	   				</div>
-
-	   				<div class="timeline-header">
-	   					<h3>Logo detection in images using SSD</h3>
-	   					<p>June 18</p>
-	   				</div>
-
-	   				<div class="timeline-content">
-	   					<h4>Self Project</h4>
-	   					<p>•Using SSD from Tensorflow API detected
-logos in Images of 6 brands. <br>
-							•Used Inception and Mobilenet for training. 
-							</p>
-	   				</div>
-
-	   			</div> <!-- /timeline-block -->
-
-   				<!--<div class="timeline-block">
-
-	   				<div class="timeline-ico">
-	   					<i class="fa fa-graduation-cap"></i>
-	   				</div>
-
-	   				<div class="timeline-header">
-	   					<h3>License Plate Detection</h3>
-	   					<p>April 2018</p>
-	   				</div>
-
-	   				<div class="timeline-content">
-	   					<h4>Self Project</h4>
-	   					<p>•Using OpenCV found contours of an image. <br>
-							•Segmented the license plate by filtering contours according to aspect ratio, area and their angles. <br>
-							•Trained digit recogniser using CNN to recognise digits in the license plate.<br>
-							•Working on Alphabet recogniser.</p>
-	   				</div>
-
-	   			</div> <!-- /timeline-block -->
-
-	   			<!--<div class="timeline-block">
-
-	   				<div class="timeline-ico">
-	   					<i class="fa fa-graduation-cap"></i>
-	   				</div>
-
-	   				<div class="timeline-header">
-	   					<h3>Web Scraping</h3>
-	   					<p>May 2017</p>
-	   				</div>
-
-	   				<div class="timeline-content">
-	   					<h4>IET,Birla Institute Of Technology,Mesra</h4>
-	   					<p>•Used Python and Beautiful Soup to scrape Webpages<br>•Using Newspaper library extracted newspaper articles from websites.</p>
-	   				</div>
-
-	   			</div> <!-- /timeline-block -->
-
-	   			<!--<div class="timeline-block">
-
-	   				<div class="timeline-ico">
-	   					<i class="fa fa-graduation-cap"></i>
-	   				</div>
-
-	   				<div class="timeline-header">
-	   					<h3>Prosthetic Arm</h3>
-	   					<p>May 2017 - July 2017</p>
-	   				</div>
-
-	   				<div class="timeline-content">
-	   					<h4>IEEE,Birla Institute Of Technology,Mesra</h4>
-	   					<p>•Involved the concept of prosthetics.<br>•Signals were sent from the hands of the user using arduino which were received by the Prosthetic Arm using bluetooth modules.</p>
-	   				</div>
-
-	   			</div> <!-- /timeline-block -->
-
-   			<!--</div> <!-- /timeline-wrap -->   			
-
-   		<!--</div> <!-- /col-twelve -->
-   		
-   	<!--</div> <!-- /resume-timeline -->
-   	<!--<div class="row resume-timeline">
-
-   		<div class="col-twelve resume-header">
-
-   			<h2>Education</h2>
-
-   		</div> <!-- /resume-header -->
-
-   		<!--<div class="col-twelve">
-
-   			<div class="timeline-wrap">
-
-   				<div class="timeline-block">
-
-	   				<div class="timeline-ico">
-	   					<i class="fa fa-briefcase"></i>
-	   				</div>
-
-	   				<div class="timeline-header">
-	   					<h3>B.Tech, EE</h3>
-	   					<p>July 2016 - Present</p>
-	   				</div>
-
-	   				<div class="timeline-content">
-	   					<h4>BIRLA INSTITUTE OF TECHNOLOGY,MESRA </h4>
-	   					<p></p>
-	   				</div>
-
-	   			</div> <!-- /timeline-block -->
-
-	   			<!--<div class="timeline-block">
-
-	   				<div class="timeline-ico">
-	   					<i class="fa fa-briefcase"></i>
-	   				</div>
-
-	   				<div class="timeline-header">
-	   					<h3>AISSCE(CBSE)</h3>
-	   					<p>2015</p>
-	   				</div>
-
-	   				<div class="timeline-content">
-	   					<h4>Ammar Bagh-E-Nounihal school, Indore</h4>
-	   					<p></p>
-	   				</div>
-
-	   			</div> <!-- /timeline-block -->
-
-	   			<!--<div class="timeline-block">
-
-	   				<div class="timeline-ico">
-	   					<i class="fa fa-briefcase"></i>
-	   				</div>
-
-	   				<div class="timeline-header">
-	   					<h3>AISSE(CBSE)</h3>
-	   					<p>2013</p>
-	   				</div>
-
-	   				<div class="timeline-content">
-	   					<h4>Ammar Bagh-E-Nounihal school, Indore</h4>
-	   					<p></p>
-	   				</div>
-
-	   			</div> <!-- /timeline-block -->
-
-   			<!--</div> <!-- /timeline-wrap -->   			
-
-   		<!--</div> <!-- /col-twelve -->
-   		
-   	<!--</div> <!-- /resume-timeline -->
-		
-	<!--</section> <!-- /features -->
-
-
-
-	<!--Ongoing Projects 
-		================================================ -->
-
-	<section id="portfolio">
-
-		<div class="row section-intro">
-   		<div class="col-twelve">
-
-   			<h5>Ongoing Projects</h5>
-   			<h1></h1>
-
-   			<p class="lead"></p>
-
-   		</div>   
-
-
-   	</div>
-
-   	<div class="row portfolio-content">
-
-   		<div class="col-twelve">
-
-   			<!-- portfolio-wrapper -->
-	         <div id="folio-wrapper" class="block-1-2 block-mob-full stack">
-
-	         <div class="bgrid folio-item">
-	               <div class="item-wrap">
-	               	<img src="images/portfolio/colorization.png" alt="Liberty" style="width: 500px; height: 300px;">
-	                  <a href="#modal-01-op" class="overlay">	                  	           
-	                     <div class="folio-item-table">
-	                     	<div class="folio-item-cell">
-		     					       <h3 class="folio-title">PC SECURITY SYSTEM</h3>	     					    
-		     					    	 <span class="folio-types">
-		     					       	  
-		     					       </span>
-		     					   </div>	                      	
-	                     </div>                    
-	                  </a>
-	               </div>	               
-	        		</div> <!-- /folio-item -->
-
-	        	 <div class="bgrid folio-item">
-	               <div class="item-wrap">
-	               	<img src="images/portfolio/tgs.png" alt="Liberty" style="width: 500px; height: 300px;">
-	                  <a href="#modal-02-op" class="overlay">	                  	           
-	                     <div class="folio-item-table">
-	                     	<div class="folio-item-cell">
-		     					       <h3 class="folio-title">Kaggle: TGS Salt Identification Challenge</h3>	     					    
-		     					    	 <span class="folio-types">
-		     					       	  
-		     					       </span>
-		     					   </div>	                      	
-	                     </div>                    
-	                  </a>
-	               </div>	               
-	        		</div> <!-- /folio-item -->
-
-
-	        		<div class="bgrid folio-item">
-	               <div class="item-wrap">
-	               	<img src="images/portfolio/sp.png" alt="Liberty" style="width: 500px; height: 300px;">
-	                  <a href="#modal-03-op" class="overlay">	                  	           
-	                     <div class="folio-item-table">
-	                     	<div class="folio-item-cell">
-		     					       <h3 class="folio-title">COMPACT NEURAL NET</h3>	     					    
-		     					    	 <span class="folio-types">
-		     					       	  
-		     					       </span>
-		     					   </div>	                      	
-	                     </div>                    
-	                  </a>
-	               </div>	               
-	        		</div> <!-- /folio-item -->
-	        	</div>
-
-
-
-
-	        	<!--Modals ============ -->
-	        	<div id="modal-01-op" class="popup-modal slider mfp-hide">	
-
-				     	<div class="media">
-				     		<img src="images/portfolio/colorization.png" alt="" />
-				     	</div>      	
-
-					   <div class="description-box">
-					      <h4>PC-SECURITY-SYSTEM</h4>		      
-					      <p></p>
-
-					      <div class="categories"></div>			               
-					   </div>
-
-			         <div class="link-box">
-			            <!--a href="" target="_blank">Blog Post</a-->
-					      <a href="#" class="popup-modal-dismiss">Close</a>
-			         </div>		
-
-			         
-
-			         <div id="modal-02-op" class="popup-modal slider mfp-hide">	
-
-				     	<div class="media">
-				     		<img src="images/portfolio/tgs.png" alt="" />
-				     	</div>      	
-
-					   <div class="description-box">
-					      <h4>Kaggle: TGS: Salt Identification Challenge</h4>		      
-					      <p></p>
-
-					      <div class="categories"></div>			               
-					   </div>
-
-			         <div class="link-box">
-			            <!--a href="" target="_blank">Blog Post</a-->
-					      <a href="#" class="popup-modal-dismiss">Close</a>
-			         </div>		
-
-			         <div id="modal-03-op" class="popup-modal slider mfp-hide">	
-
-				     	<div class="media">
-				     		<img src="images/portfolio/sp.png" alt="" />
-				     	</div>      	
-
-					   <div class="description-box">
-					      <h4>COMPACT NEURAL NET</h4>		      
-					      <p></p>
-
-					      <div class="categories"></div>			               
-					   </div>
-
-			         <div class="link-box">
-			            <!--a href="" target="_blank">Blog Post</a-->
-					      <a href="#" class="popup-modal-dismiss">Close</a>
-			         </div>		
- </section>
-
-	<!-- Portfolio Section
-   ================================================== -->
-	<section id="portfolio">
-
-		<div class="row section-intro">
-   		<div class="col-twelve">
-
-   			<h5>Completed Projects</h5>
-   			<h1></h1>
-
-   			<p class="lead"></p>
-
-   		</div>   		
-   	</div> <!-- /section-intro--> 
-
-   	<div class="row portfolio-content">
-
-   		<div class="col-twelve">
-
-   			<!-- portfolio-wrapper -->
-	         <div id="folio-wrapper" class="block-1-2 block-mob-full stack">
-
-	         <div class="bgrid folio-item">
-	               <div class="item-wrap">
-	               	<img src="images/portfolio/ecg.png" alt="Liberty" style="width: 500px; height: 300px;">
-	                  <a href="#modal-03" class="overlay">	                  	           
-	                     <div class="folio-item-table">
-	                     	<div class="folio-item-cell">
-		     					       <h3 class="folio-title">Arrhythmia Classification from ECG</h3>	     					    
-		     					    	 <span class="folio-types">
-		     					       	  
-		     					       </span>
-		     					   </div>	                      	
-	                     </div>                    
-	                  </a>
-	               </div>	               
-	        		</div> <!-- /folio-item -->
-
-
-	        		<div class="bgrid folio-item">
-	               <div class="item-wrap">
-	               	<img src="images/portfolio/fizz.jpg" alt="Liberty" style="width: 500px; height: 300px;">
-	                  <a href="#modal-04" class="overlay">	                  	           
-	                     <div class="folio-item-table">
-	                     	<div class="folio-item-cell">
-		     					       <h3 class="folio-title">Logo detection using SSD</h3>	     					    
-		     					    	 <span class="folio-types">
-		     					       	  
-		     					       </span>
-		     					   </div>	                      	
-	                     </div>                    
-	                  </a>
-	               </div>	               
-	        		</div> <!-- /folio-item -->
-	        		
-
-
-	         	<div class="bgrid folio-item">
-	               <div class="item-wrap">
-	               	<img src="images/portfolio/lstm.jpg" alt="Liberty" style="width: 500px; height: 300px;">
-	                  <a href="#modal-01" class="overlay">	                  	           
-	                     <div class="folio-item-table">
-	                     	<div class="folio-item-cell">
-		     					       <h3 class="folio-title">Classifying tweets</h3>	     					    
-		     					    	 <span class="folio-types">
-		     					       	  
-		     					       </span>
-		     					   </div>	                      	
-	                     </div>                    
-	                  </a>
-	               </div>	               
-	        		</div> <!-- /folio-item -->
-
-	        		<div class="bgrid folio-item">
-	               <div class="item-wrap">
-	               	<img src="images/portfolio/output.png" alt="Shutterbug" style="width: 500px; height: 300px;">
-	               	<a href="#modal-02" class="overlay">              		                  
-	                     <div class="folio-item-table">
-	                     	<div class="folio-item-cell">
-	                     		<h3 class="folio-title">License Plate detection</h3>	     					    
-		     					    	<span class="folio-types">
-		     					       	  
-		     					      </span>		     		
-		     					   </div> 	                      	
-	                     </div>                    
-	                  </a>
-	               </div>
-	        		</div> <!-- /folio-item -->
-
-	            
-	               
-
-	        		
-
-	            
-
-	            <!-- modal popups - begin
-	            ============================================================= -->
-	            <div id="modal-03" class="popup-modal slider mfp-hide">	
-
-				     	<div class="media">
-				     		<img src="images/portfolio/ecg.png" alt="" />
-				     	</div>      	
-
-					   <div class="description-box">
-					      <h4>Arrhythmia Classification from ECG</h4>		      
-					      <p></p>
-
-					      <div class="categories"></div>			               
-					   </div>
-
-			         	      
-
-				   </div> <!-- /modal-01 -->
-
-				    <div id="modal-04" class="popup-modal slider mfp-hide">	
-
-				     	<div class="media">
-				     		<img src="images/portfolio/fizz.jpg" alt="" />
-				     	</div>      	
-
-					   <div class="description-box">
-					      <h4>Logo detection using SSD</h4>		      
-					      <p></p>
-
-					      <div class="categories"></div>			               
-					   </div>
-
-			        	      
-
-				   </div> <!-- /modal-01 -->
-	            <div id="modal-01" class="popup-modal slider mfp-hide">	
-
-				     	<div class="media">
-				     		<img src="images/portfolio/lstm.jpg" alt="" />
-				     	</div>      	
-
-					   <div class="description-box">
-					      <h4>Classifying tweets</h4>		      
-					      <p></p>
-
-					      <div class="categories"></div>			               
-					   </div>
-
-			              
-
-				   </div> <!-- /modal-01 -->
-
-				   <div id="modal-02" class="popup-modal slider mfp-hide">	
-
-				     	<div class="media">
-				     		<img src="images/portfolio/output.png" alt="" />
-				     	</div>      	
-
-					   <div class="description-box">
-					      <h4>License Plate detection</h4>		      
-					      <p></p>
-
-					      <div class="categories"></div>			               
-					   </div>
-
-			            
-
-				   </div> <!-- /modal-02 -->
-
-				   
-
-				   <!-- modal popups - end
-	            ============================================================= -->
-
-	         </div> <!-- /portfolio-wrapper --> 
-
-   		</div>  <!-- /twelve -->   
-
-   	</div> <!-- /portfolio-content --> 
-		
-	</section> <!-- /portfolio --> 
-
-
-	<!-- CTA Section
-   ================================================== -->
-	<!--<section id="cta" class="grey-section">
-
-   	<div class="row cta-content">
-
-   		<div class="col-twelve section-ads">  
-
-	     		<h2 class="h01"><a href="http://www.dreamhost.com/r.cgi?287326|STYLESHOUT">Styleshout Recommends Dreamhost.</a></h2>
-
-		      <p class="lead">
-		      Looking for an awesome and reliable webhosting? Try <a href="http://www.dreamhost.com/r.cgi?287326|STYLESHOUT"><span>DreamHost</span></a>.
-				Get <span>$50 off</span> when you sign up with the promocode <span>styleshout</span>. 
-				<! Simply type	the promocode in the box labeled “Promo Code” when placing your order. -->	
-				<!--</p>
-
-				<div class="action">
-			      <a class="button button-primary large" href="http://www.dreamhost.com/r.cgi?287326|STYLESHOUT">Sign Up Now</a>
-		      </div>		     	
-
-   		</div>
-
-   	</div> <! /cta-content -->
-
-  <!-- </section> <! /cta --> 
-
-	
-	<!-- services Section
-   ================================================== -->
-	<!--<section id="services">
-
-		<div class="overlay"></div>
-
-		<div class="row section-intro">
-   		<div class="col-twelve">
-
-   			<h5>Services</h5>
-   			<h1>What Can I Do For You?</h1>
-
-   			<p class="lead">Lorem ipsum Do commodo in proident enim in dolor cupidatat adipisicing dolore officia nisi aliqua incididunt Ut veniam lorem ipsum Consectetur ut in in eu do.</p>
-
-   		</div>   		
-   	</div> <! /section-intro -->
-
-   <!--	<div class="row services-content">
-
-   		<div id="owl-slider" class="owl-carousel services-list">
-
-	      	<div class="service">	
-
-	      		<span class="icon"><i class="icon-earth"></i></span>            
-
-	            <div class="service-content">	
-
-	            	 <h3>Webdesign</h3>
-
-		            <p class="desc">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
-	         		</p>
-	         		
-	         	</div> 	         	 
-
-				</div> <! /service -->
-
-				<!--<div class="service">	
-
-					<span class="icon"><i class="icon-window"></i></span>                          
-
-	            <div class="service-content">	
-
-	            	<h3>Web Development</h3>  
-
-		            <p class="desc">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
-	         		</p>
-
-	            </div>	                          
-
-			   </div> <! /service -->
-
-			   <!--<div class="service">
-
-			   	<span class="icon"><i class="icon-paint-brush"></i></span>		            
-
-	            <div class="service-content">
-
-	            	<h3>Branding</h3>
-
-		            <p class="desc">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
-	        			</p> 
-
-	            </div> 	            	               
-
-			   </div> <! /service -->
-
-				<!--<div class="service">
-
-					<span class="icon"><i class="icon-toggles"></i></span>	              
-
-	            <div class="service-content">
-
-	            	<h3>UI/UX Design</h3>
-
-		            <p class="desc">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
-	         		</p> 
-	         		
-	            </div>                
-
-				</div> <! /service -->
-
-			   <!--<div class="service">
-
-			   	<span class="icon"><i class="icon-image"></i></span>	            
-
-	            <div class="service-content">
-
-	            	<h3>Graphics Design</h3>
-
-		            <p class="desc">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
-	        			</p> 
-
-	            </div>	               
-
-			   </div> <! /service -->
-
-			   <!--<div class="service">
-
-			   	<span class="icon"><i class="icon-chat"></i></span>	   	           
-
-	            <div class="service-content">
-
-	            	 <h3>Consultancy</h3>
-
-		            <p class="desc">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
-	        			</p> 
-	        			
-	            </div>	               
-
-			   </div> <! /service -->
-
-	      <!--</div> <! /services-list -->
-   		
-   	<!--</div> <! /services-content -->
-		
-	<!--</section> <! /services -->
-
-
-	<!--<! stats Section
-   ================================================== -->
-	<!--<section id="stats" class="count-up">
-
-		<div class="row">
-			<div class="col-twelve">
-
-				<div class="block-1-6 block-s-1-3 block-tab-1-2 block-mob-full stats-list">
-
-					<div class="bgrid stat">
-
-						<div class="icon-part">
-							<i class="icon-pencil-ruler"></i>
-						</div>
-
-						<h3 class="stat-count">
-							1500
-						</h3>
-
-						<h5 class="stat-title">
-							Projects Completed
-						</h5>
-
-					</div> <! /stat -->					
-
-					<!--<div class="bgrid stat">
-
-						<div class="icon-part">
-							<i class="icon-users"></i>
-						</div>
-
-						<h3 class="stat-count">
-							900
-						</h3>
-
-						<h5 class="stat-title">
-							Happy Clients
-						</h5>
-
-					</div> <!/stat -->
-
-					<!--<div class="bgrid stat">
-
-						<div class="icon-part">
-							<i class="icon-badge"></i>
-						</div>
-
-						<h3 class="stat-count">
-							200
-						</h3>
-
-						<h5 class="stat-title">
-							Awards Received
-						</h5>
-
-					</div> <! /stat -->									
-
-					<!--<div class="bgrid stat">
-
-						<div class="icon-part">
-							<i class="icon-light-bulb"></i>
-						</div>
-
-						<h3 class="stat-count">
-							120
-						</h3>
-
-						<h5 class="stat-title">
-							Crazy Ideas
-						</h5>
-
-					</div> <! /stat -->
-
-					<!--<div class="bgrid stat">
-
-						<div class="icon-part">
-							<i class="icon-cup"></i>
-						</div>
-
-						<h3 class="stat-count">
-							1500
-						</h3>
-
-						<h5 class="stat-title">
-							Coffee Cups
-						</h5>
-
-					</div> <! /stat -->
-
-					<!--<div class="bgrid stat">
-
-						<div class="icon-part">
-							<i class="icon-clock"></i>
-						</div>
-
-						<h3 class="stat-count">
-							7200
-						</h3>
-
-						<h5 class="stat-title">
-							Hours
-						</h5>
-
-					</div> <! /stat -->
-
-				<!--/div> <! /stats-list -->
-
-			<!--</div> <! /twelve -->
-		<!--</div> <! /row -->
-
-	<!--</section> <! /stats -->
-	
-   <!-- contact
-   ================================================== -->
-	<section id="contact">
-
-		<div class="row section-intro">
-   		<div class="col-twelve">
-
-   			<h5>Contact</h5>
-   			<h1>I'd Love To Hear From You.</h1>
-
-   			<p class="lead"></p>
-
-   		</div> 
-   	</div> <!-- /section-intro -->
-
-   	<div class="row contact-form">
-
-   		<div class="col-twelve">
-
-            <!-- form -->
-            <!--<form name="contactForm" id="contactForm" method="post" action="">
-      			<fieldset>
-
-                  <div class="form-field">
- 						   <input name="contactName" type="text" id="contactName" placeholder="Name" value="" minlength="2" required="">
-                  </div>
-                  <div class="form-field">
-	      			   <input name="contactEmail" type="email" id="contactEmail" placeholder="Email" value="" required="">
-	               </div>
-                  <div class="form-field">
-	     				   <input name="contactSubject" type="text" id="contactSubject" placeholder="Subject" value="">
-	               </div>                       
-                  <div class="form-field">
-	                 	<textarea name="contactMessage" id="contactMessage" placeholder="message" rows="10" cols="50" required=""></textarea>
-	               </div>                      
-                 <div class="form-field">
-                     <button class="submitform">Submit</button>
-                     <div id="submit-loader">
-                        <div class="text-loader">Sending...</div>                             
-       				      <div class="s-loader">
-								  	<div class="bounce1"></div>
-								  	<div class="bounce2"></div>
-								  	<div class="bounce3"></div>
-								</div>
-							</div>
-                  </div>
-
-      			</fieldset>
-      		</form> <!-- Form End -->
-
-            <!-- contact-warning -->
-            <!--<div id="message-warning">            	
-            </div>            
-            <! contact-success -->
-      		<!--<div id="message-success">
-               <i class="fa fa-check"></i>Your message was sent, thank you!<br>
-      		</div>
-
-         </div> <! /col-twelve -->
-   		
-   <!--	</div> <! /contact-form -->
-
-   	<div class="row contact-info">
-
-   		<div class="col-four tab-full">
-
-   			<div class="icon">
-   				<i class="icon-pin"></i>
-   			</div>
-
-   			<h5>Where to find me</h5>
-
-   			<p>
-            Hostel 13, BIT Mesra, Ranchi
+<body>
+    <div id="mobile-menu-open" class="shadow-large">
+        <i class="fa fa-bars" aria-hidden="true"></i>
+    </div>
+    <!-- End #mobile-menu-toggle -->
+    <header>
+        <div id="mobile-menu-close">
+            <span>Close</span> <i class="fa fa-times" aria-hidden="true"></i>
+        </div>
+        <ul id="menu" class="shadow">
+            <li>
+                <a href="#about">About</a>
+            </li>
+            <li>
+                <a href="#experience">Experience</a>
+            </li>
+            <li>
+                <a href="#education">Education</a>
+            </li>
+            <li>
+                <a href="#projects">Projects</a>
+            </li>
+            <li>
+                <a href="#skills">Skills</a>
+            </li>
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+        </ul>
+    </header>
+    <!-- End header -->
+
+    <div id="lead">
+        <div id="lead-content">
+            <h1>Abbas Ismail</h1>
+            <h2>Machine Learning | Deep Learning | Computer Vision </h2>
+            <a href="https://drive.google.com/file/d/1nDXaFYzXyZfo5S7EiJjwCjCsiJzIbJjo/view?usp=sharing" class="btn-rounded-white">Download Resume</a>
+        </div>
+        <!-- End #lead-content -->
+
+        <div id="lead-overlay"></div>
+
+        <div id="lead-down">
+            <span>
+                <i class="fa fa-chevron-down" aria-hidden="true"></i>
+            </span>
+        </div>
+        <!-- End #lead-down -->
+    </div>
+    <!-- End #lead -->
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h2 class="heading">About Me</h2>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                        I am a final year undergraduate in  Computer Science at Birla Institute of Technology, Mesra.
+                        I am broadly interested in Machine Learning, Deep learning and its applications in Computer Vision. Currently, I am working as an Research Engineer at OpenMined, a privacy-preserving deep learning library, where I am building two new Split Neural Network architectures for vertically partitioned data. Also, I have been currently working on the task of solving differential equation (ordinary, partial, as well as irregular equations) through deep learning. Apart from this, I spend my free time usually reading quantum mechanics theories.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End #about -->
+
+    <div id="experience" class="background-alt">
+        <h2 class="heading">Experience</h2>
+        <div id="experience-timeline">
+            <div data-date="July 2020 – Present">
+                <h3>OpenMined</h3>
+                <h4>Research Engineer</h4>
+                <p ALIGN=LEFT>
+                   Working on Integration of Split Neural Network architectures for vertically partitioned data.
+                   Proposed and building two new Split Neural Network architectures, for enabling training of neural networks without data sharing among the owners.  
+                </p>
+            </div>
+
+            <div data-date="May 2020 - June 2020">
+                <h3>Flutura Decision Sciences and Analytics</h3>
+                <h4>Data Science Intern</h4>
+                <p>
+                    Developed and Object Detection model using for detecting face masks. Integrated it into Crebra Vision platform.
+                </p>
+            </div>
+
+            <div data-date="May 2019 - June 2019">
+                <h3>Edutech Analytics Lab</h3>
+                <h4>Deep Learning Intern</h4>
+                <p>
+                    Developed an deep learning model which predicts intensity of cyclone through satellite images.
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- End #experience -->
+
+    <div id="education">
+        <h2 class="heading">Education</h2>
+        <div class="education-block">
+            <h3>Birla Institute of Technology, Mesra</h3>
+            <span class="education-date">2017 - 2021</span>
+            <h4>Bachelor of Engineering in Computer Science</h4>
+            <p>
+                CGPA ( upto VI semester ): 7.31
             </p>
+        </div>
+        <!-- End .education-block -->
 
-   		</div>
+     
+        <!-- End .education-block -->
+    </div>
+    <!-- End #education -->
 
-   		<div class="col-four tab-full collapse">
+    <div id="projects" class="background-alt">
+        <h2 class="heading">Projects</h2>
+        <div class="container">
+            <div class="row">
+                <div class="project shadow-large">
+                    <div class="project-image">
+                        <img src="images/project.jpg" />
+                    </div>
+                    <!-- End .project-image -->
+                    <div class="project-info">
+                        <h3>PC Security System</h3>
+                        <p>
+                            Real time security system which notifies admin throuag a text message if someone unauthorized is accesing your PC. Used PyTorch and OpenCV for real time face recognition. Used Twilio API for sending text meassage to admin's mobile.
+                        </p>
+                        <a href="https://github.com/abbas5253/PC-Security-Notification-System">View Project</a>
+                    </div>
+                    <!-- End .project-info -->
+                </div>
+                <!-- End .project -->
 
-   			<div class="icon">
-   				<i class="icon-mail"></i>
-   			</div>
-
-   			<h5>Email Me At</h5>
-
-   			<p>abbas.tel2342@gmai.com<br>
-			   				     
-			   </p>
-
-   		</div>
-
-   		<div class="col-four tab-full">
-
-   			<div class="icon">
-   				<i class="icon-phone"></i>
-   			</div>
-
-   			<h5>Call Me At</h5>
-
-   			<p>(+91)7869469532<br>(+91)7974236343
-			   </p>
-
-   		</div>
-   		
-   	</div> <!-- /contact-info -->
-		
-	</section> <!-- /contact -->
+                <div class="project shadow-large">
+                    <div class="project-image">
+                        <img src="images/project.jpg" />
+                    </div>
+                    <!-- End .project-image -->
+                    <div class="project-info">
+                        <h3>Compact Neural Network</h3>
+                        <p>
+                            Creates any type of Neural Network as per the given input parameters. Creates an interface in IPython Notebooks for easy input of parameters. Technology used: Tensorflow  , IPython Widget,Numpy , Matplotlib.
+                        </p>
+                        <a href="https://github.com/abbas5253/Compact_NN">View Project</a>
+                    </div>
 
 
-   <!-- footer
-   ================================================== -->
+                    <!-- End .project-info -->
+                </div>
 
-   <!--<footer>
-     	<div class="row">
+                <div class="project shadow-large">
+                    <div class="project-image">
+                        <img src="images/project.jpg" />
+                    </div>
+                    <!-- End .project-image -->
+                    <div class="project-info">
+                        <h3>Differential Equation Solver using Deep Learning</h3>
+                        <p>
+                            Solves  Ordinary, Partial and Irregular differential equation using artificial neural networks.
+                        </p>
+                        <h4>OnGoing</h4>
+                    </div>
 
-     		<div class="col-six tab-full pull-right social">
 
-     			<ul class="footer-social">        
-			      <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-			      <li><a href="#"><i class="fa fa-behance"></i></a></li>
-			      <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-			      <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-			      <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-			   </ul> 
-	      		
-	      </div>
+                    <!-- End .project-info -->
+                </div>
+                
+                <!-- End .project -->
+            </div>
+        </div>
+    </div>
+    <!-- End #projects -->
 
-      	<div class="col-six tab-full">
-	      	<div class="copyright">
-		        	<span></span> 
-		        	<span>Design by <a href="http://www.styleshout.com/">styleshout</a></span>	         	
-		         </div>		                  
-	      	</div>
+    <div id="skills">
+        <h2 class="heading">Skills</h2>
+        <ul>
+        	<li>Machine Learning</li>
+            <li>Deep Learning</li>
+            <li>Computer Vision</li>
+            <li>Federated Learning</li>
+            <li>Secure-Multi party Computations</li>
+            <br></br>
 
-	      	<div id="go-top">
-		         <a class="smoothscroll" title="Back to Top" href="#top"><i class="fa fa-long-arrow-up"></i></a>
-		      </div>
+            <li>C++</li>
+            <li>Python</li>
+            <br></br>
+            
+            <li>PyTorch</li>
+            <li>PySyft</li>
+            <li>Scikit-Learn</li>
+            <li>Numpy</li>
 
-      	</div> <!/row -->     	
-   <!--</footer>  
+            <li>Pandas</li>
+            <li>Matplotlib</li>
+            <li>Scipy</li>
+            <br></br>
+            
+        </ul>
+    </div>
+    <!-- End #skills -->
 
-   <div id="preloader"> 
-    	<div id="loader"></div>
-   </div> 
+    <div id="contact">
+        <h2>I'd Love To Hear From You.</h2>
+        <div id="contact-form">
+            <form method="POST" action="https://formspree.io/xgenqeyl">
+                <input type="hidden" name="_subject" value="Contact request from personal website" />
+                <input type="email" name="_replyto" placeholder="Your email" required>
+                <textarea name="message" placeholder="Your message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+        <!-- End #contact-form -->
+    </div>
+    <!-- End #contact -->
 
-   <!Java Script
-   ================================================== --> 
-   <script src="js/jquery-2.1.3.min.js"></script>
-   <script src="js/plugins.js"></script>
-   <script src="js/main.js"></script>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-5 copyright">
+                    <p>
+                        Copyright &copy; 2020 Abbas Ismail
+                    </p>
+                </div>
+                <div class="col-sm-2 top">
+                    <span id="to-top">
+                        <i class="fa fa-chevron-up" aria-hidden="true"></i>
+                    </span>
+                </div>
+                <div class="col-sm-5 social">
+                    <ul>
+                        <li>
+                            <a href="https://github.com/abbas5253" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://linkedin.com/abbas-ismail53" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End footer -->
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/scripts.min.js"></script>
 </body>
 
 </html>
