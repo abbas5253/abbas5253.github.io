@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Resume | Abbas Ismail</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff;
+        }
+
+        /* --- PRINT STYLES FOR ONE-PAGE PDF --- */
+        @media print {
+            @page {
+                size: letter;
+                margin: 0.2in 0.3in;
+            }
+
+            /* General Print Reset */
+            * {
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+
+            body {
+                margin: 0;
+                padding: 0;
+                background-color: white !important;
+                color: #000;
+                font-size: 6pt;
+                line-height: 1.0;
+            }
+
+            /* Hide Interactive/Screen-Only Elements */
+            nav,
+            .print-hide {
+                display: none !important;
+            }
+
+            /* Reset Main Content Area */
+            main {
+                padding: 0 !important;
+                margin: 0 !important;
+                max-width: 100% !important;
+            }
+
+            /* Remove all visual fluff for clean print */
+            section,
+            .bg-white,
+            .bg-slate-50,
+            .rounded-2xl,
+            .shadow-sm,
+            .shadow-md,
+            .shadow-lg {
+                background-color: white !important;
+                box-shadow: none !important;
+                border: none !important;
+                border-radius: 0 !important;
+                padding: 0 !important;
+            }
+
+            /* Section Formatting - Ultra Tight */
+            section {
+                margin-bottom: 0.04rem !important;
+                padding-bottom: 0 !important;
+                page-break-inside: avoid;
+            }
+
+            h1 {
+                font-size: 11pt !important;
+                margin-bottom: 0.01rem !important;
+                page-break-after: avoid;
+            }
+
+            h2 {
+                font-size: 7.5pt !important;
+                margin-top: 0.04rem !important;
+                margin-bottom: 0.02rem !important;
+                padding-bottom: 0.01rem !important;
+                border-bottom: 0.5pt solid #1e3a8a !important;
+                page-break-after: avoid;
+                font-weight: 700 !important;
+            }
+
+            h3 {
+                font-size: 6.5pt !important;
+                margin-bottom: 0.03rem !important;
+            }
+
+            h4 {
+                font-size: 6.5pt !important;
+                margin-bottom: 0.01rem !important;
+            }
+
+            p {
+                margin: 0.01rem 0 !important;
+                font-size: 6pt !important;
+            }
+
+            /* Experience & Research: Force Details Open */
+            .exp-details {
+                display: block !important;
+                max-height: none !important;
+                opacity: 1 !important;
+                visibility: visible !important;
+                height: auto !important;
+                margin-top: 0.01rem !important;
+                padding-left: 0 !important;
+            }
+
+            .exp-details>div {
+                padding: 0 !important;
+                background: white !important;
+            }
+
+            .exp-header {
+                padding: 0 !important;
+                margin-bottom: 0.01rem !important;
+                background: white !important;
+            }
+
+            .exp-item {
+                margin-bottom: 0.03rem !important;
+                padding-left: 0.06rem !important;
+                border-left: 0.5pt solid #0ea5e9 !important;
+                page-break-inside: avoid;
+            }
+
+            .exp-header {
+                padding: 0 !important;
+                margin-bottom: 0.01rem !important;
+            }
+
+            /* Skills Table - Compact */
+            #skills-table {
+                border: 0.5pt solid #cbd5e1 !important;
+                margin-top: 0.05rem !important;
+            }
+
+            #skills-table>div {
+                display: flex !important;
+                border-bottom: 0.5pt solid #e2e8f0 !important;
+            }
+
+            #skills-table>div:last-child {
+                border-bottom: none !important;
+            }
+
+            #skills-table>div>div:first-child {
+                width: 20% !important;
+                padding: 0.08rem !important;
+                background: #f8fafc !important;
+                font-weight: 700 !important;
+                font-size: 6pt !important;
+                color: #1e3a8a !important;
+                border-right: 0.5pt solid #cbd5e1 !important;
+            }
+
+            #skills-table>div>div:last-child {
+                width: 80% !important;
+                padding: 0.08rem !important;
+                font-size: 5.5pt !important;
+                line-height: 1.1 !important;
+                color: #000 !important;
+            }
+
+            /* Lists - Ultra Compact */
+            ul.list-disc {
+                margin: 0.01rem 0 !important;
+                padding-left: 0.5rem !important;
+            }
+
+            ul.list-disc li {
+                margin-bottom: 0 !important;
+                font-size: 4.5pt !important;
+                line-height: 0.95 !important;
+            }
+
+            /* Education Grid */
+            #education-container {
+                display: grid !important;
+                grid-template-columns: repeat(2, 1fr) !important;
+                gap: 0.4rem !important;
+            }
+
+            .edu-item {
+                padding: 0.3rem !important;
+                border: 0.5pt solid #e2e8f0 !important;
+                background: white !important;
+            }
+
+            /* Contact Info */
+            .contact-info {
+                font-size: 9pt !important;
+                margin-top: 0.2rem !important;
+            }
+
+            /* Links */
+            a {
+                color: #0369a1 !important;
+                text-decoration: none !important;
+            }
+
+            /* Summary Box - Ultra Compact */
+            .summary-box {
+                padding: 0.08rem !important;
+                margin: 0.05rem 0 !important;
+                border: 0.5pt solid #e2e8f0 !important;
+                background: #f8fafc !important;
+            }
+
+            .summary-box h2 {
+                font-size: 7pt !important;
+                margin-bottom: 0.03rem !important;
+                border: none !important;
+            }
+
+            .summary-box p {
+                font-size: 5.5pt !important;
+                line-height: 1.1 !important;
+            }
+
+            /* Contact Info - Ultra Compact */
+            .contact-info {
+                font-size: 5.5pt !important;
+                margin-top: 0.02rem !important;
+                margin-bottom: 0.02rem !important;
+            }
+
+            .contact-info span {
+                margin: 0 0.1rem !important;
+            }
+
+            /* Education - Ultra Compact */
+            #education-container {
+                gap: 0.08rem !important;
+            }
+
+            .edu-item {
+                padding: 0.08rem !important;
+            }
+
+            .edu-item h4 {
+                font-size: 6pt !important;
+                margin-bottom: 0 !important;
+            }
+
+            .edu-item p {
+                font-size: 5.5pt !important;
+                margin: 0 !important;
+            }
+
+            /* Spacing Overrides */
+            .mb-8 {
+                margin-bottom: 0.08rem !important;
+            }
+
+            .mt-6 {
+                margin-top: 0.05rem !important;
+            }
+
+            .border-b-2 {
+                padding-bottom: 0.02rem !important;
+                margin-bottom: 0.03rem !important;
+                border-bottom: 0.5pt solid #cbd5e1 !important;
+            }
+
+            /* Experience Details */
+            .exp-details {
+                margin-top: 0.02rem !important;
+            }
+
+            /* Header Section - Extreme Compression */
+            #summary {
+                margin-bottom: 0.05rem !important;
+            }
+
+            #summary .text-center {
+                padding-bottom: 0.02rem !important;
+                margin-bottom: 0.02rem !important;
+            }
+
+            #summary h1 {
+                font-size: 12pt !important;
+                margin-bottom: 0.01rem !important;
+            }
+
+            #summary p.mt-2 {
+                margin-top: 0.01rem !important;
+                font-size: 7pt !important;
+            }
+
+            #summary .summary-box {
+                display: none !important;
+            }
+
+            /* Skills Section - Extreme Compression */
+            #skills {
+                margin-bottom: 0.05rem !important;
+            }
+
+            #skills h2 {
+                margin-top: 0.05rem !important;
+                margin-bottom: 0.03rem !important;
+            }
+
+            #skills-table {
+                margin-top: 0.02rem !important;
+            }
+
+            #skills-table>div>div:first-child {
+                padding: 0.05rem !important;
+                font-size: 5.5pt !important;
+            }
+
+            #skills-table>div>div:last-child {
+                padding: 0.05rem !important;
+                font-size: 5pt !important;
+                line-height: 1.05 !important;
+            }
+
+            /* Experience Section - Extreme Compression */
+            #experience {
+                margin-bottom: 0.03rem !important;
+            }
+
+            #experience h2 {
+                margin-top: 0.03rem !important;
+                margin-bottom: 0.02rem !important;
+            }
+
+            #experience .exp-item {
+                margin-bottom: 0.02rem !important;
+                padding-left: 0.06rem !important;
+            }
+
+            #experience .exp-header h4 {
+                font-size: 5.5pt !important;
+                margin-bottom: 0 !important;
+            }
+
+            #experience .exp-header p {
+                font-size: 5pt !important;
+            }
+
+            #experience .exp-details {
+                margin-top: 0 !important;
+            }
+
+            #experience ul.list-disc li {
+                font-size: 4.5pt !important;
+                line-height: 0.95 !important;
+                margin-bottom: 0 !important;
+            }
+
+            /* Research Section - Extreme Compression */
+            #research {
+                margin-bottom: 0.03rem !important;
+            }
+
+            #research h2 {
+                margin-top: 0.03rem !important;
+                margin-bottom: 0.02rem !important;
+            }
+
+            #research .exp-item,
+            #research>div>div {
+                margin-bottom: 0.02rem !important;
+                padding-left: 0.06rem !important;
+            }
+
+            #research h4 {
+                font-size: 5.5pt !important;
+                margin-bottom: 0 !important;
+            }
+
+            #research p {
+                font-size: 5pt !important;
+            }
+
+            #research .exp-details {
+                margin-top: 0 !important;
+            }
+
+            #research ul.list-disc li {
+                font-size: 4.5pt !important;
+                line-height: 0.95 !important;
+                margin-bottom: 0 !important;
+            }
+
+            /* Education Section - Extreme Compression */
+            #education {
+                margin-bottom: 0.03rem !important;
+            }
+
+            #education h2 {
+                margin-top: 0.05rem !important;
+                margin-bottom: 0.03rem !important;
+            }
+
+            #education-container {
+                gap: 0.05rem !important;
+            }
+
+            #education .edu-item {
+                padding: 0.05rem !important;
+            }
+
+            #education .edu-item h4 {
+                font-size: 5.5pt !important;
+                margin-bottom: 0 !important;
+            }
+
+            #education .edu-item p {
+                font-size: 5pt !important;
+                margin: 0 !important;
+                line-height: 1.0 !important;
+            }
+        }
+
+        /* --- END PRINT STYLES --- */
+    </style>
+</head>
+
+<body class="text-slate-700">
+
+    <!-- Fixed Data for Resume Content -->
+    <script>
+        const resumeData = {
+            skills: {
+                "Programming": ["Python (asyncio, pykka, OOP, Pytest), Scala, Bash, and Advanced SQL (Tuning, Window Functions)."],
+                "Big Data": ["Apache Spark (PySpark Optimization, Catalyst), Spark Structured Streaming, Kafka, Flink, Hadoop (HDFS, Hive, Parquet)."],
+                "Cloud & DW": ["AWS (Glue, S3, Redshift, Lambda), Azure (ADF, Databricks, Data Lake), Snowflake, PostgreSQL, MySQL, NoSQL, DBT, and Terraform (IaC)."],
+                "Orchestration": ["Airflow (Custom Operators/Hooks, Deferrable Operators, Airflow Datasets), CI/CD, ETL/ELT, and Data Modeling (Dimensional)."],
+                "AI/ML/Data": ["AI/ML Solution Architecture, Generative AI (Prompt Engineering, Embeddings), Data Quality Frameworks, and Data Governance."]
+            },
+            experience: [
+                {
+                    company: "Amazon (AWS)",
+                    title: "Data Engineer II",
+                    period: "08/2024 – Present",
+                    location: "Vancouver, BC",
+                    details: [
+                        "Pioneered and productionized the Carbon Allocation Methodology (v2.0) on AWS Glue (PySpark), establishing a rigorous, multi-stage allocation model for attributing estimated GHG emissions (Scope 1 & 2) to customer accounts.",
+                        "Architected and implemented the three-stage allocation pipeline: Emissions distribution at the server-rack/cluster layer, mapping to AWS services based on inter-dependencies, and final attribution to customer accounts.",
+                        "Engineered complex methodology updates to align with GHG Protocol and ISO 14040/14044: Integrated logic for proportionally allocating estimated carbon from unutilized capacity and refined calculation for serverless services (AWS Lambda, Amazon Redshift).",
+                        "Developed and enforced a comprehensive Data Quality framework upstream of the calculation pipeline, achieving a consistently low rate of 0.0% reporting errors over 6 consecutive quarters."
+                    ]
+                },
+                {
+                    company: "Adaptavist",
+                    title: "Data Engineer",
+                    period: "01/2023 – 08/2024",
+                    location: "Toronto, ON",
+                    details: [
+                        "Optimized core extraction pipelines by implementing a fault-tolerant, asynchronous methodology using Python `asyncio` and `pykka`, resulting in a **2 hour reduction** in overall data ingestion latency and a **15% decrease** in cloud resource consumption.",
+                        "Drove E2E analytics reliability by owning and managing 100+ production DAGs in Airflow, leading the migration of legacy batch ETL, which improved data reliability and achieved **99.9% workflow uptime**.",
+                        "Devised a resource-efficient, distributed import process leveraging advanced Airflow features (Deferrable Operators, Airflow Datasets), decreasing resource utilization during peak loads by **18%**.",
+                        "Elevated code quality using OOP principles and Pytest, reducing team debugging time by **25%** and accelerating the CI/CD pipeline for feature deployment."
+                    ]
+                },
+                {
+                    company: "Enquero",
+                    title: "Data Engineer",
+                    period: "07/2021 – 08/2022",
+                    location: "Hyderabad, India",
+                    details: [
+                        "Delivered a Data Governance solution by developing a Metadata Adapter for Azure Databricks and AWS Glue, automatically generating Data Lineage Graphs to ensure **100% compliance** with organizational data policies.",
+                        "Engineered a low-latency, real-time data pipeline for payments reconciliation leveraging Spark Structured Streaming, reducing transaction anomaly detection time from 4 hours to seconds.",
+                        "Optimized high-volume ETL pipelines using PySpark (Databricks) for ingestion into an AWS S3 Data Lake, processing over **100 million records daily** with optimized partitioning."
+                    ]
+                },
+                {
+                    company: "MAQ Software",
+                    title: "Associate Software Engineer",
+                    period: "04/2021 – 07/2021",
+                    location: "Mumbai, India",
+                    details: [
+                        "Built scalable ETL pipelines using PySpark in Azure Databricks, orchestrated via ADF, to process user activity data, supporting over 20 sales and marketing reports.",
+                        "Implemented and maintained Data Quality monitoring systems across Azure Apps, resulting in a **35% reduction** in data inconsistency tickets within the first quarter."
+                    ]
+                }
+            ],
+            // UPDATED RESEARCH SECTION: Separated PINNs for technical depth
+            research: [
+                {
+                    project: "Physics-Informed Neural Networks (PINNs) Implementation",
+                    period: "06/2020 – 12/2020",
+                    location: "Remote / Personal Project",
+                    details: [
+                        "Developed a full Python/TensorFlow framework for implementing Physics-Informed Neural Networks (PINNs) to solve complex Partial Differential Equations (PDEs) with high accuracy.",
+                        "Engineered the custom loss function to incorporate both the data misfit error and the residual of the governing physical laws, enabling model training without large labeled datasets.",
+                        "Successfully applied the framework to solve challenging forward and inverse problems, demonstrating the ability to predict physical fields and identify unknown parameters simultaneously.",
+                        "GitHub Repository (Code & Examples): <a href='https://github.com/abbas5253/PINNs' target='_blank' class='text-sky-600 hover:text-sky-700 underline font-semibold'>PINNs</a>"
+                    ]
+                },
+                {
+                    project: "OpenMined Contributor & Research in Privacy-Preserving AI",
+                    period: "06/2020 – 12/2020",
+                    location: "Remote",
+                    details: [
+                        "Investigated and prototyped AI solutions using Differential Privacy techniques for responsible model deployment, ensuring data compliance in distributed environments.",
+                        "Explored distributed Deep Learning architectures by implementing 2 novel configurations of a Split Neural Network.",
+                        "Wrote and published a research paper for the ICLR Workshop 2021: <a href='https://arxiv.org/abs/2104.00489' target='_blank' class='text-sky-600 hover:text-sky-700 underline font-semibold'>Paper Link</a>"
+                    ]
+                }
+            ],
+            education: [
+                {
+                    degree: "PG, Ontario Graduate Certificate",
+                    major: "Big Data Analytics",
+                    institution: "Lambton College, Mississauga, ON",
+                    period: "09/2022 – 04/2024"
+                },
+                {
+                    degree: "Bachelor of Engineering",
+                    major: "Computer Science and Engineering",
+                    institution: "Birla Institute Of Technology, Mesra, Ranchi, India",
+                    period: "07/2017 – 04/2021"
+                }
+            ]
+        };
+    </script>
+
+    <!-- Navigation Bar -->
+    <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <div>
+                        <span class="font-bold text-xl text-slate-800">Abbas Ismail</span>
+                        <span class="text-sm text-slate-600 ml-3">| Data and AI Engineer</span>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#summary"
+                            class="text-slate-600 hover:bg-slate-100 hover:text-slate-900 px-3 py-2 rounded-md text-sm font-medium">Summary</a>
+                        <a href="#skills"
+                            class="text-slate-600 hover:bg-slate-100 hover:text-slate-900 px-3 py-2 rounded-md text-sm font-medium">Skills</a>
+                        <a href="#experience"
+                            class="text-slate-600 hover:bg-slate-100 hover:text-slate-900 px-3 py-2 rounded-md text-sm font-medium">Experience</a>
+                        <!-- Added Research link -->
+                        <a href="#research"
+                            class="text-slate-600 hover:bg-slate-100 hover:text-slate-900 px-3 py-2 rounded-md text-sm font-medium">Research</a>
+                        <a href="#education"
+                            class="text-slate-600 hover:bg-slate-100 hover:text-slate-900 px-3 py-2 rounded-md text-sm font-medium">Education</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main class="max-w-7xl mx-auto px-6 lg:px-12 py-8">
+
+        <!-- Header Section -->
+        <section id="summary" class="mb-8 scroll-mt-24">
+            <div class="text-center border-b-2 border-slate-300 pb-4">
+                <h1 class="text-4xl font-bold text-slate-900">Abbas Ismail</h1>
+                <p class="mt-2 text-lg font-medium text-slate-700">Data and AI Engineer</p>
+                <div class="contact-info mt-3 text-sm text-slate-600 flex justify-center gap-4 flex-wrap">
+                    <span>📧 abbas.ismail@example.com</span>
+                    <span>📱 +1 (XXX) XXX-XXXX</span>
+                    <span>📍 Vancouver, BC</span>
+                    <span>🔗 <a href="https://linkedin.com/in/yourprofile"
+                            class="text-sky-600 hover:underline">LinkedIn</a></span>
+                </div>
+            </div>
+            <div class="mt-6 summary-box bg-slate-50 p-6 border border-slate-200">
+                <h2 class="text-xl font-bold text-slate-800 mb-3">Professional Summary</h2>
+                <p class="text-slate-700 leading-relaxed text-sm">
+                    Highly accomplished Data Engineer with 5+ years of experience specializing in designing, optimizing,
+                    and deploying complex, high-volume data pipelines (ETL/ELT). Expert in the AWS/Azure ecosystem,
+                    focusing on Apache Spark (PySpark) optimization and advanced Airflow features (Deferrable Operators,
+                    Datasets). Proven track record in highly technical domains, including GHG Carbon Methodology,
+                    asynchronous processing (Python asyncio/pykka), and low-latency stream processing.
+                </p>
+            </div>
+        </section>
+
+        <!-- Core Technical Skills -->
+        <section id="skills" class="mb-8 scroll-mt-24">
+            <h2 class="text-2xl font-bold text-slate-900 mb-4 border-b-2 border-slate-300 pb-2">Core Technical Skills
+            </h2>
+            <div id="skills-table" class="border border-slate-200">
+                <!-- Skills content will be generated here by JS -->
+            </div>
+        </section>
+
+        <!-- Professional Experience -->
+        <section id="experience" class="mb-8 scroll-mt-24">
+            <h2 class="text-2xl font-bold text-slate-900 mb-4 border-b-2 border-slate-300 pb-2">Professional Experience
+            </h2>
+            <div id="experience-timeline" class="space-y-4">
+                <!-- Experience items generated by JS -->
+            </div>
+        </section>
+
+        <!-- Research & Publications Section -->
+        <section id="research" class="mb-8 scroll-mt-24">
+            <h2 class="text-2xl font-bold text-slate-900 mb-4 border-b-2 border-slate-300 pb-2">Research & Publications
+            </h2>
+            <div id="research-container" class="space-y-4">
+                <!-- Research items generated by JS -->
+            </div>
+        </section>
+
+        <!-- Education -->
+        <section id="education" class="mb-8 scroll-mt-24">
+            <h2 class="text-2xl font-bold text-slate-900 mb-4 border-b-2 border-slate-300 pb-2">Education</h2>
+            <div id="education-container" class="grid md:grid-cols-2 gap-4">
+                <!-- Education items generated by JS -->
+            </div>
+        </section>
+
+        <!-- Spacer for screen view only -->
+        <div class="h-96 print-hide"></div>
+
+    </main>
+
+    <!-- JavaScript Logic -->
+    <script>
+        // --- Standard DOMContentLoaded Listener ---
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // --- SKILLS SECTION INIT ---
+            const skillsTable = document.getElementById('skills-table');
+
+            // --- GENERAL INIT ---
+            const experienceTimelineContainer = document.getElementById('experience-timeline');
+            const educationContainer = document.getElementById('education-container');
+            const researchContainer = document.getElementById('research-container');
+
+            // --- SKILLS SECTION LOGIC ---
+            function renderAllSkills() {
+                skillsTable.innerHTML = '';
+
+                Object.entries(resumeData.skills).forEach(([category, skills], index) => {
+                    const rowElement = document.createElement('div');
+                    rowElement.className = 'flex border-b border-slate-200 last:border-b-0';
+
+                    const skillsText = skills[0]; // Already formatted as a single string
+
+                    rowElement.innerHTML = `
+                        <div class="w-1/5 p-2 bg-slate-50 font-bold text-sm text-slate-900 border-r border-slate-200">${category}</div>
+                        <div class="w-4/5 p-2 text-sm text-slate-700">${skillsText}</div>
+                    `;
+
+                    skillsTable.appendChild(rowElement);
+                });
+            }
+
+            // --- EXPERIENCE SECTION LOGIC ---
+            resumeData.experience.forEach((exp) => {
+                const expElement = document.createElement('div');
+                expElement.className = 'exp-item border-l-4 border-sky-500 pl-4 py-2';
+
+                expElement.innerHTML = `
+                    <div class="exp-header">
+                        <div class="flex justify-between items-start mb-1">
+                            <div>
+                                <h4 class="font-bold text-base text-slate-900">${exp.company}</h4>
+                                <p class="text-sm font-semibold text-sky-700">${exp.title}</p>
+                            </div>
+                            <p class="text-xs text-slate-600 text-right">${exp.period}<br/>${exp.location}</p>
+                        </div>
+                    </div>
+                    <div class="exp-details mt-2">
+                        <ul class="list-disc list-outside space-y-1 text-slate-700 text-sm ml-5">
+                            ${exp.details.map(d => `<li>${d}</li>`).join('')}
+                        </ul>
+                    </div>
+                `;
+                experienceTimelineContainer.appendChild(expElement);
+            });
+
+            // Experience items are now always expanded for print-friendly layout
+
+            // --- RESEARCH SECTION LOGIC ---
+            resumeData.research.forEach((item) => {
+                const researchElement = document.createElement('div');
+                researchElement.className = 'border-l-4 border-sky-500 pl-4 py-2';
+
+                researchElement.innerHTML = `
+                    <div class="flex justify-between items-start mb-1">
+                        <div>
+                            <h4 class="font-bold text-base text-slate-900">${item.project}</h4>
+                        </div>
+                        <p class="text-xs text-slate-600 text-right">${item.period}<br/>${item.location}</p>
+                    </div>
+                    <div class="exp-details mt-2">
+                        <ul class="list-disc list-outside space-y-1 text-slate-700 text-sm ml-5">
+                            ${item.details.map(d => `<li>${d}</li>`).join('')}
+                        </ul>
+                    </div>
+                `;
+                researchContainer.appendChild(researchElement);
+            });
+
+
+            // --- EDUCATION SECTION LOGIC ---
+            resumeData.education.forEach(edu => {
+                const eduElement = document.createElement('div');
+                eduElement.className = 'edu-item bg-white p-4 border border-slate-200 rounded-lg';
+                eduElement.innerHTML = `
+                    <h4 class="font-bold text-base text-slate-900">${edu.degree}</h4>
+                    <p class="font-semibold text-sky-700 text-sm">${edu.major}</p>
+                    <p class="text-sm text-slate-600 mt-1">${edu.institution}</p>
+                    <p class="text-xs text-slate-500 mt-1">${edu.period}</p>
+                `;
+                educationContainer.appendChild(eduElement);
+            });
+
+            // Initial load of all skill categories
+            renderAllSkills();
+        });
+    </script>
+</body>
+
+</html>
