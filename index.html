@@ -57,18 +57,26 @@
             .rounded-2xl,
             .shadow-sm,
             .shadow-md,
-            .shadow-lg {
+            .shadow-lg,
+            div,
+            .flex,
+            .border-l-4 {
                 background-color: white !important;
                 box-shadow: none !important;
                 border: none !important;
                 border-radius: 0 !important;
                 padding: 0 !important;
             }
+            
+            /* Force zero padding on all elements */
+            * {
+                padding: 0 !important;
+            }
 
             /* Section Formatting - Ultra Tight */
             section {
-                margin-bottom: 0.04rem !important;
-                padding-bottom: 0 !important;
+                margin-bottom: 0.02rem !important;
+                padding: 0 !important;
                 page-break-inside: avoid;
             }
 
@@ -110,8 +118,8 @@
                 opacity: 1 !important;
                 visibility: visible !important;
                 height: auto !important;
-                margin-top: 0.01rem !important;
-                padding-left: 0 !important;
+                margin-top: 0 !important;
+                padding: 0 !important;
             }
 
             .exp-details>div {
@@ -121,13 +129,13 @@
 
             .exp-header {
                 padding: 0 !important;
-                margin-bottom: 0.01rem !important;
+                margin-bottom: 0 !important;
                 background: white !important;
             }
 
             .exp-item {
                 margin-bottom: 0.03rem !important;
-                padding-left: 0.06rem !important;
+                padding-left: 0 !important;
                 border-left: 0.5pt solid #0ea5e9 !important;
                 page-break-inside: avoid;
             }
@@ -154,7 +162,7 @@
 
             #skills-table>div>div:first-child {
                 width: 20% !important;
-                padding: 0.08rem !important;
+                padding: 0 !important;
                 background: #f8fafc !important;
                 font-weight: 700 !important;
                 font-size: 6pt !important;
@@ -164,7 +172,7 @@
 
             #skills-table>div>div:last-child {
                 width: 80% !important;
-                padding: 0.08rem !important;
+                padding: 0 !important;
                 font-size: 5.5pt !important;
                 line-height: 1.1 !important;
                 color: #000 !important;
@@ -173,7 +181,7 @@
             /* Lists - Ultra Compact */
             ul.list-disc {
                 margin: 0.01rem 0 !important;
-                padding-left: 0.5rem !important;
+                padding-left: 0.4rem !important;
             }
 
             ul.list-disc li {
@@ -190,7 +198,7 @@
             }
 
             .edu-item {
-                padding: 0.3rem !important;
+                padding: 0 !important;
                 border: 0.5pt solid #e2e8f0 !important;
                 background: white !important;
             }
@@ -209,7 +217,7 @@
 
             /* Summary Box - Ultra Compact */
             .summary-box {
-                padding: 0.08rem !important;
+                padding: 0 !important;
                 margin: 0.05rem 0 !important;
                 border: 0.5pt solid #e2e8f0 !important;
                 background: #f8fafc !important;
@@ -278,12 +286,13 @@
 
             /* Header Section - Extreme Compression */
             #summary {
-                margin-bottom: 0.05rem !important;
+                margin-bottom: 0.02rem !important;
+                padding: 0 !important;
             }
 
             #summary .text-center {
-                padding-bottom: 0.02rem !important;
-                margin-bottom: 0.02rem !important;
+                padding: 0 !important;
+                margin-bottom: 0.01rem !important;
             }
 
             #summary h1 {
@@ -315,12 +324,12 @@
             }
 
             #skills-table>div>div:first-child {
-                padding: 0.05rem !important;
+                padding: 0 !important;
                 font-size: 5.5pt !important;
             }
 
             #skills-table>div>div:last-child {
-                padding: 0.05rem !important;
+                padding: 0 !important;
                 font-size: 5pt !important;
                 line-height: 1.05 !important;
             }
@@ -337,7 +346,7 @@
 
             #experience .exp-item {
                 margin-bottom: 0.02rem !important;
-                padding-left: 0.06rem !important;
+                padding-left: 0 !important;
             }
 
             #experience .exp-header h4 {
@@ -372,7 +381,7 @@
             #research .exp-item,
             #research>div>div {
                 margin-bottom: 0.02rem !important;
-                padding-left: 0.06rem !important;
+                padding-left: 0 !important;
             }
 
             #research h4 {
@@ -409,7 +418,7 @@
             }
 
             #education .edu-item {
-                padding: 0.05rem !important;
+                padding: 0 !important;
             }
 
             #education .edu-item h4 {
